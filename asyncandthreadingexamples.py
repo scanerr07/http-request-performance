@@ -24,7 +24,7 @@ async def get_data_async_but_as_wrapper(urls):
         for url in urls:                              # Tek tek istek atar (senkrona benzer)
             async with session.get(url) as resp:
                 json_array.append(await resp.json())
-    et = time.time()tesekkurl
+    et = time.time()
     elapsed_time = et - st
     print('Execution time:', elapsed_time, 'seconds')
     return json_array
