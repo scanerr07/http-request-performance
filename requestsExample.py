@@ -1,5 +1,7 @@
 import requests
 import json #json.dumps(..) ile veriyi json'a çevirdim
+
+#GET
 '''
 user_id = input('Enter your id: ')
 get_url = f"https://jsonplaceholder.typicode.com/todos{user_id}"
