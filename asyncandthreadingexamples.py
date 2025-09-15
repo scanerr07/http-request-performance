@@ -24,7 +24,7 @@ async def get_data_async_but_as_wrapper(urls):
         for url in urls:                              # Tek tek istek atar (senkrona benzer)
             async with session.get(url) as resp:
                 json_array.append(await resp.json())
-    et = time.time()
+    et = time.time()tesekkurl
     elapsed_time = et - st
     print('Execution time:', elapsed_time, 'seconds')
     return json_array
@@ -83,7 +83,7 @@ def get_data_threading(urls):
 # --- TEST URL'LERİ (her biri 3 sn gecikmeli cevap verir) ---
 urls = ['https://postman-echo.com/delay/3'] * 10
 
-#get_data_sync(urls)                  # ≈42 sn sürer (en yavaş)
-#asyncio.run(get_data_async_but_as_wrapper(urls)) # ≈34 sn sürer
-#asyncio.run(get_data_async_concurrently(urls))   # ≈4 sn sürer (en hızlı)
-#get_data_threading(urls)             # ≈4 sn sürer (çoklu iş parçacığı)
+#get_data_sync(urls)                  # 42 sn sürer (en yavaş)
+#asyncio.run(get_data_async_but_as_wrapper(urls)) # 34 sn sürer
+#asyncio.run(get_data_async_concurrently(urls))   # 4 sn sürer (en hızlı)
+#get_data_threading(urls)             # 4 sn sürer (çoklu iş parçacığı)
